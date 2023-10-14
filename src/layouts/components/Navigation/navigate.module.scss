@@ -1,0 +1,37 @@
+@import "@assets/scss/common";
+
+.navigateContainer {
+  height: $header-height;
+  max-height: $header-height;
+  min-height: $header-height;
+
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  align-items: center;
+
+  .navigateInnerContainer {
+    @include paddingX(28px);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+.logoContainer {
+  display: flex;
+  //justify-content: center;
+  color: $neutrals-black !important;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 900 !important ;
+  font-style: italic;
+  user-select: none;
+  text-align: center;
+  text-decoration: none !important;
+  font-size: $font-size-title !important;
+}
+
+.btnMenuProfile {
+  gap: 8px;
+}

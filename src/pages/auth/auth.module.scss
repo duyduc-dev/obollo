@@ -1,0 +1,81 @@
+@import '@assets/scss/_typography';
+@import '@assets/scss/_mixins';
+@import '@assets/scss/_colors';
+
+.mxAuto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  @extend .mxAuto;
+  margin: auto;
+  max-width: 320px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.obillo {
+  font-size: $font-size-h2;
+  font-weight: 900;
+  font-style: italic;
+  user-select: none;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.signIn {
+  font-size: $font-size-h3;
+  text-align: center;
+}
+
+.font {
+  @include text-product-b2;
+}
+
+.signInContent {
+  @extend .font;
+  color: $neutrals-grey-5;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.btnGoogle {
+  background-color: $color-pollen !important;
+  width: 100% !important;
+  height: var(--space-button-width-px) !important;
+  border-radius: var(--space-xss-px);
+  color: $neutrals-grey-1 !important;
+}
+
+.formSignIn {
+  & > span.messageError {
+    color: $secondary-tangerine;
+  }
+}
+
+.inputField {
+  & ~ & {
+    margin-top: 16px;
+  }
+}
+
+.btnShowPassword {
+  width: var(--space-lg) !important;
+  height: var(--space-lg) !important;
+}
+
+.btnSignIn {
+  width: 100% !important;
+  height: var(--space-button-width-px) !important;
+  border-radius: var(--space-xss-px);
+}
+
+.forgotPassword {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}

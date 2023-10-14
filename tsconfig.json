@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "types": ["node", "react", "react-dom"],
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": false,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@i18n/*": ["./src/i18n/*"],
+      "@i18n": ["./src/i18n/index.ts"],
+      "@libs/*": ["./src/libs/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@constants": ["./src/constants/index.ts"],
+      "@constants/enum": ["./src/constants/enum/index.ts"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@routes": ["./src/routes/index.tsx"],
+      "@utils": ["./src/utils/*"],
+      "@types": ["./src/types/index.ts"],
+      "@store": ["./src/store/*"],
+       "@/*": ["./src/*"]
+    },
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+  },
+  "include": ["**/*.ts", "**/*.tsx", "./global.d.ts"],
+  "exclude": ["node_modules"]
+}

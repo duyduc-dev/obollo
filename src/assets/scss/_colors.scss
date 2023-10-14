@@ -1,0 +1,34 @@
+$neutrals-grey-1: #161616;
+$neutrals-grey-2: #292929;
+$neutrals-grey-3: #444444;
+$neutrals-grey-4: #666666;
+$neutrals-grey-5: #8f8f8f;
+$neutrals-grey-6: #b5b5b5;
+$neutrals-grey-7: #E7E7E7;
+$neutrals-grey-8: #EFEFEF;
+$neutrals-grey-9: #F8F8F8;
+
+$neutrals-white: #FFFFFF;
+$neutrals-black: #000000;
+$secondary-tangerine: #ED4533;
+
+$color-pollen: #FFFF00;
+$color-magenta: #FC64FF;
+$color-red: #FFCBCB;
+$color-yellow: #FFE175;
+$color-green: #90FFAF;
+$color-blue: #64B5FF;
+$scrollbar-thumb-color: #d4d4d4;
+$box-shadow: rgba(0, 0, 0, 0.25);
+
+$color-green-success:  #61d345;
+$color-red-error:  #ff4b4b;
+$color-yellow-warning: #ffab00;
+$color-selected: #8f8f8f;
+
+$color-bg-left-nav: #f8f8f8;
+
+:global(.color-global-variable) {
+  --link-button-color: #8F8F8F;
+  --neutrals-grey-1: #161616;
+}

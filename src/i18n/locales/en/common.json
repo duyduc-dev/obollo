@@ -1,0 +1,11 @@
+{
+  "signIn": "Sign in",
+  "orEnterWithYourEmail": "Or enter with your email",
+  "email": "Email",
+  "password": "Password",
+  "forgotPassword": "Forgot Password",
+  "continueWithGoogle": "Continue with Google",
+  "validate" : {
+    "requiredField": "{{field}} is a required field"
+  }
+}

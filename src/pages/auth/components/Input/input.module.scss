@@ -1,0 +1,34 @@
+@import "@assets/scss/common";
+
+.inputContainer {
+  display: flex;
+  width: 100%;
+  border-radius: var(--space-xss-px);
+  height: var(--space-xl-px);
+  padding: var(--space-sl-px) var(--space-sm-px) var(--space-margin-bottom-px) var(--space-sl-px);
+  align-items: center;
+  background: $neutrals-grey-8;
+  border: none;
+  outline: none;
+
+  &.hasError {
+    border: 1px solid $secondary-tangerine !important;
+  }
+
+  & input {
+    border: 0;
+    width: 100%;
+    background: $neutrals-grey-8;
+    //@include paddingX(12px);
+    @include text-product-b1;
+
+    @include placeholder {
+      @include text-product-b2
+    }
+  }
+
+  & input:focus {
+    border: none;
+    outline: none;
+  }
+}

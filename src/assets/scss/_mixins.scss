@@ -1,0 +1,176 @@
+$mobile-width: 375px;
+$tablet-width: 768px;
+$desktop-width: 1080px;
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin paddingX($px) {
+  padding-left: $px;
+  padding-right: $px;
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+@mixin translate-leaner {
+  transition: all 0.1s linear;
+}
+
+@mixin image-contain {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@mixin scrollbar-vertical-auto {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+
+  /* IE 10+ */
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: none !important;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px !important;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+
+  &:global(.on-scrollbar) {
+    scrollbar-width: thin;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+  }
+
+  &:global(.on-scrollbar)::-webkit-scrollbar-track {
+    -webkit-box-shadow: none !important;
+    border-radius: 10px;
+    background-color: $neutrals-grey-8;
+  }
+
+  &:global(.on-scrollbar)::-webkit-scrollbar {
+    width: 4px !important;
+  }
+
+  &:global(.on-scrollbar)::-webkit-scrollbar-thumb {
+    background-color: #d4d4d4;
+  }
+}
+
+@mixin text-product-b1 {
+  font-family: $font-family;
+  font-size: $font-size-extra-large;
+  font-style: normal;
+  font-weight: $font-weight-medium;
+  line-height: 24px;
+}
+
+@mixin text-product-b2 {
+  font-family: $font-family;
+  font-size: $font-size-large;
+  font-style: normal;
+  font-weight: $font-weight-medium;
+  line-height: 20px;
+}
+
+@mixin text-product-b3 {
+  font-family: $font-family;
+  font-size: $font-size-medium;
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  line-height: 20px;
+}
+
+@mixin text-product-b4 {
+  font-family: $font-family;
+  font-size: $font-size-medium;
+  font-style: normal;
+  font-weight: $font-weight-medium;
+  line-height: normal;
+}
+
+@mixin text-product-h2 {
+  font-family: $font-family;
+  font-size: $font-size-h2;
+  font-style: normal;
+  font-weight: $font-weight-medium;
+  line-height: 62px;
+}
+
+@mixin text-product-h3 {
+  font-family: $font-family;
+  font-size: $font-size-h3;
+  font-style: normal;
+  font-weight: $font-weight-medium;
+  line-height: 120%;
+}
+
+@mixin text-product-h4 {
+  font-family: $font-family;
+  font-size: $font-size-title;
+  font-style: normal;
+  font-weight: $font-weight-medium;
+  line-height: 32px;
+}
+
+@mixin text-product-h5 {
+  font-family: $font-family;
+  font-size: $font-size-large;
+  font-style: normal;
+  font-weight: $font-weight-medium;
+  line-height: 20px;
+}
+
+@mixin product-cta-text {
+  font-family: $font-family;
+  font-size: $font-size-medium;
+  font-style: normal;
+  font-weight: $font-weight-medium;
+  line-height: 16px;
+}
